@@ -1,0 +1,104 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #0c0c0c;
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+           
+
+        }
+        div > div {
+            width: 20%;
+            height: 100px;
+            border-radius: 5px;
+            box-shadow: 5px 10px 18px #0c0c0c;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div style="background-color: aqua;">AQUA</div>
+        <div style="background-color:brown;">BROWN</div>
+        <div style="background-color: blue;">BLUE</div>
+        <div style="background-color: red;">RED</div>
+    </div>
+    <div>
+        <div style="background-color: green;">GREEN</div>
+        <div style="background-color: yellow;">YELLOW</div>
+        <div style="background-color: purple;">PURPLE</div>
+        <div style="background-color: orange;">ORANGE</div>        
+    </div>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Boxes with Hover</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+      color: #0c0c0c;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      gap: 20px;
+    }
+    div > div {
+      width: 20%;
+      height: 100px;
+      border-radius: 5px;
+      box-shadow: 5px 10px 18px #0c0c0c;
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: white;
+      text-shadow: 1px 1px 2px #000;
+    }
+    div > div:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div style="background-color: aqua;">AQUA</div>
+    <div style="background-color:brown;">BROWN</div>
+    <div style="background-color: blue;">BLUE</div>
+    <div style="background-color: red;">RED</div>
+  </div>
+  <div>
+    <div style="background-color: green;">GREEN</div>
+    <div style="background-color: yellow; color: black;">YELLOW</div>
+    <div style="background-color: purple;">PURPLE</div>
+    <div style="background-color: orange;">ORANGE</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile Shop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: yellow;
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+   nav {
+      background-color: #0055a5;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+    }
+    nav a:hover {
+      background-color: #003366;
+    }
+
+    /* .carousel {
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    .carousel img {
+      width: max-content;
+      height: 250px;
+      object-fit: cover;
+    } */
+    .carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 250px;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: calc(100% * 5); /* assuming 5 images */
+  animation: scroll 20s linear infinite;
+}
+
+.carousel img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  20%  { transform: translateX(-100%); }
+  40%  { transform: translateX(-200%); }
+  60%  { transform: translateX(-300%); }
+  80%  { transform: translateX(-400%); }
+  100% { transform: translateX(0); }
+}
+
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      height: 355px;
+    }
+
+    .card {
+      width: 300px;
+      height: 350px;
+      border: 2px solid #003366 ;
+      padding: 10px;
+      text-align: center;
+      background-color: white;
+    }
+    .card img {
+      width: 100%;
+      height: 280px;
+      object-fit: contain;
+      background-color: #f8f8f8;
+      padding: 5px;
+    }
+
+
+    .price {
+      font-weight: bold;
+      color: green;
+      margin: 5px 0;
+    }
+
+
+    footer {
+      background-color: #003366;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    
+    .footer-top {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      color: white;
+    }
+  </style>
+ 
+
+</head>
+<body>
+
+  <header id="home" style="font-size: 36px;">Mobile Shop</header>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#mobiles">Mobiles</a>
+    <a href="#offers">Offers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- <div class="carousel" id="offers">
+    <img src="img1.jpg" alt="Offer 1">
+    <img src="img2.jpg" alt="Offer 2">
+    <img src="img3.jpg" alt="Offer 2">
+    <img src="img4.jpg" alt="Offer 1">
+    <img src="img5.jpg" alt="Offer 2">
+  </div> -->
+  <div class="carousel" id="offers">
+  <div class="carousel-track">
+    <img src="img1.jpg" alt="Offer 1">
+    <img src="img2.jpg" alt="Offer 2">
+    <img src="img3.jpg" alt="Offer 3">
+    <img src="img4.jpg" alt="Offer 4">
+    <img src="img5.jpg" alt="Offer 5">
+  </div>
+</div>
+
+
+  <h1 style="padding-left: 20px;">Mobiles:</h1>
+
+  <div class="card-container" id="mobiles">
+    <div class="card">
+      <img src="phn1.webp" alt="Phone">
+      <div>Iphone 16e</div>
+      <div class="price">₹54,900</div>
+    </div>
+    <div class="card">
+      <img src="phn2.webp" alt="Phone">
+      <div>Iphone 16</div>
+      <div class="price">₹74,900</div>
+    </div>
+    <div class="card">
+      <img src="phn3.webp" alt="Phone">
+      <div>Samsung A35 5G</div>
+      <div class="price">₹19,999</div>
+    </div>
+    <div class="card">
+      <img src="phn4.webp" alt="Phone">
+      <div>Realme 14 Pro</div>
+      <div class="price">₹24,999</div>
+    </div>
+    <div class="card">
+      <img src="phn5.webp" alt="Phone">
+      <div>Google Pixel 9a</div>
+      <div class="price">₹49,999</div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card">
+      <img src="phn6.webp" alt="Phone">
+      <div>Google Pixel 8a</div>
+      <div class="price">₹37,999</div>
+    </div>
+    <div class="card">
+      <img src="phn7.webp" alt="Phone">
+      <div>Oppo K13 5G</div>
+      <div class="price">₹18,499</div>
+    </div>
+    <div class="card">
+      <img src="phn8.webp" alt="Phone">
+      <div>Vivo T4 5G</div>
+      <div class="price">₹21,999</div>
+    </div>
+    <div class="card">
+      <img src="phn9.webp" alt="Phone">
+      <div>Samsung Galaxy S25</div>
+      <div class="price">₹80,999</div>
+    </div>
+    <div class="card">
+      <img src="phn10.webp" alt="Phone">
+      <div>Moto Edge 60 5G</div>
+      <div class="price">₹24,299</div>
+    </div>
+  </div>
+
+  <footer>
+  <div class="footer-top">
+    <div>
+      <h4>ABOUT</h4>
+      <ol>Contact Us</ol>
+      <ol>About Us</ol>
+    </div>
+
+    <div>
+      <h4>HELP</h4>
+      <ol>Payments</ol>
+      <ol>Shipping</ol>
+      <ol>Cancellation & Returns</ol>
+      <ol>FAQ</ol>
+    </div>
+
+    <div>
+      <h4>CONSUMER POLICY</h4>
+      <ol>Cancellation & Returns</ol>
+      <ol>Terms Of Use</ol>
+      <ol>Security</ol>
+      <ol>Privacy</ol>
+    </div>
+
+    <div>
+      <h4>SOCIAL</h4>
+      <ol>Facebook</ol>
+      <ol>Twitter</ol>
+      <ol>YouTube</ol>
+      <ol>Instagram</ol>
+    </div>
+
+    <div>
+      <h4> Address:</h4>
+      <p>Flipkart Internet Private Limited,<br>
+      Buildings Alyssa, Begonia &<br>
+      Clove Embassy Tech Village,<br>
+      Outer Ring Road, Devarabeesanahalli Village,<br>
+      Bengaluru, 560103,<br>
+      Karnataka, India<br>
+      CIN : U51109KA2012PTC066107<br>
+      Telephone: <span class="blue">044-45614700 / 044-67415800</span></p>
+    </div>
+  </div>
+  
+  <div class="copyright">© 2007-2025 Mobile Shop</div>
+
+</footer>
+
+
+</body>
+</html>

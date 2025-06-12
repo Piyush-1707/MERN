@@ -1,0 +1,10 @@
+let a=10;
+console.log(a);
+a=100;
+console.log(a);
+var b=20;
+console.log(b);
+b=30;
+console.log(b);
+let c=40;
+console.log(c);

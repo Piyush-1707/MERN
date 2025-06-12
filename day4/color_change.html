@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="changeColor()">CLICK</button>
+    <div style="height: 500px; width: 500px; background-color: red;"></div>
+
+   
+
+</body>
+</html>
+ <script>
+        var button = document.querySelector("button");
+        var c = document.querySelector("div");
+
+        function changeColor() {
+            if (c.style.backgroundColor === "red") {
+                c.style.backgroundColor = "green";
+            } else if (c.style.backgroundColor === "green") {
+                c.style.backgroundColor = "yellow";
+            } else if (c.style.backgroundColor === "yellow") {
+                c.style.backgroundColor = "purple";
+            } else if (c.style.backgroundColor === "purple") {
+                c.style.backgroundColor = "orange";
+            } else if (c.style.backgroundColor === "orange") {
+                c.style.backgroundColor = "aqua";
+            } else if (c.style.backgroundColor === "aqua") {
+                c.style.backgroundColor = "brown";
+            } else if (c.style.backgroundColor === "brown") {
+                c.style.backgroundColor = "blue";
+            } else
+            c.style.backgroundColor = "red";
+        }
+    </script>
