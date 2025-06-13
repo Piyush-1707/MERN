@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM on OPERATOR</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f5f5;
+        padding: 20px;
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+    }
+    form {
+        width: 300px;
+        height: 350px;
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #e7b374;
+        border-radius: 5px;
+        box-shadow: 10px 20px 5px rgba(43, 42, 42, 0.1);
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="number"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    button {
+        padding: 10px 15px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #218838;
+    }
+    p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <form >
+        <h3><u> Kilometers to Miles </u></h3>
+        <label for="km">Kilometers:</label>
+        <input type="number" id="km" name="km" required>
+        <button type="button" onclick="convertToMiles()">Convert to Miles</button>
+        <p id="result"></p>
+    </form>
+    <form >
+        <h3><u> Celsius to Fahrenheit </u></h3>
+        <label for="celsius">Celsius:</label>
+        <input type="number" id="celsius" name="celsius" required>
+        <button type="button" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+        <p id="resultF"></p>
+    </form>
+    <form >
+        <h3><u> Pounds to Kilograms </u></h3>
+        <label for="pounds">Pounds:</label>
+        <input type="number" id="pounds" name="pounds" required>
+        <button type="button" onclick="convertToKilograms()">Convert to Kilograms</button>
+        <p id="resultK"></p>
+    </form>
+    <form >
+        <h3><u> Area of Circle </u></h3>
+        <label for="radius">Radius:</label>
+        <input type="number" id="radius" name="radius" required>
+        <button type="button" onclick="calculateArea()">Calculate Area</button>
+        <p id="resultA"></p>
+    </form>
+    <form>
+        <h3><u> Simple Interest Calculator </u></h3>
+        <label for="principal">Principal:</label>
+        <input type="number" id="principal" name="principal" required>
+        <label for="rate">Rate (%):</label>
+        <input type="number" id="rate" name="rate" required>
+        <label for="time">Time (years):</label>
+        <input type="number" id="time" name="time" required>
+        <button type="button" onclick="calculateSimpleInterest()">Calculate Simple Interest</button>
+        <p id="resultSI"></p>
+    </form>
+
+</body>
+</html>
+<script src="form_operator.js"></script>
