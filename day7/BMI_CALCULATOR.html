@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Calculator</title>
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(36, 35, 35, 0.85), rgba(36, 35, 35, 0.85)), url(bg.png);
+    background-size: 100% 100%;
+    padding: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    color: whitesmoke;
+    min-height: 100vh;
+    gap: 30px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    border: 2px solid #e7b374;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Progress Bar */
+#progressContainer {
+    width: 90%;
+    max-width: 300px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 15px;
+    display: none;
+}
+
+#progressBar {
+    height: 100%;
+    background-color: #00bfff;
+    width: 0%;
+    transition: width 0.8s ease;
+}
+
+/* Image */
+#bmiImage {
+    display: none;
+    margin-top: 20px;
+    max-width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+/* Image show class */
+#bmiImage.show {
+    display: block;
+    opacity: 1;
+}
+
+</style>
+<body>
+  
+<div>
+  <form id="bmiForm">
+    <h1>BMI Calculator</h1>
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight" required />
+
+    <label for="height">Height (m):</label>
+    <input type="number" step="0.01" id="height" name="height" required />
+
+    <button type="submit">Calculate BMI</button>
+  </form>
+
+  <p id="result"></p>
+
+  <!-- Progress Bar -->
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+  </div>
+</div>
+  <!-- BMI Category Image -->
+  <img src="" alt="BMI Result" id="bmiImage" />
+  <!-- Do's and Don'ts -->
+   <div id="tips" style="margin-top: 20px; max-width: 300px; color: white;"></div>
+
+  <script src="BMI.js"></script>
+</body>
+</html>

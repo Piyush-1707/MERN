@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electricity Bill Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    #billDetails {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #007bff;
+      border-radius: 8px;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .slab {
+      margin-bottom: 8px;
+    }
+
+    .total {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Electricity Bill Generator</h1>
+  <input type="number" id="units" placeholder="Enter units consumed" />
+  <button onclick="calculateBill()">Generate Bill</button>
+
+  <div id="billDetails"></div>
+
+  <script>
+    function calculateBill() {
+      const units = parseFloat(document.getElementById('units').value);
+      const billDetails = document.getElementById('billDetails');
+      let remaining = units;
+      let total = 0;
+      let breakdown = "";
+
+      if (isNaN(units) || units <= 0) {
+        billDetails.innerHTML = "<p>Please enter a valid number of units.</p>";
+        return;
+      }
+
+      // Slab 1
+      let slab1 = Math.min(remaining, 30);
+      total += slab1 * 3.75;
+      breakdown += `<div class="slab">1st Slab (₹3.75): ${slab1} units = ₹${(slab1 * 3.75).toFixed(2)}</div>`;
+      remaining -= slab1;
+
+      // Slab 2
+      if (remaining > 0) {
+        let slab2 = Math.min(remaining, 70);
+        total += slab2 * 5.20;
+        breakdown += `<div class="slab">2nd Slab (₹5.20): ${slab2} units = ₹${(slab2 * 5.20).toFixed(2)}</div>`;
+        remaining -= slab2;
+      }
+
+      // Slab 3
+      if (remaining > 0) {
+        let slab3 = Math.min(remaining, 100);
+        total += slab3 * 6.75;
+        breakdown += `<div class="slab">3rd Slab (₹6.75): ${slab3} units = ₹${(slab3 * 6.75).toFixed(2)}</div>`;
+        remaining -= slab3;
+      }
+
+      // Slab 4
+      if (remaining > 0) {
+        total += remaining * 7.80;
+        breakdown += `<div class="slab">4th Slab (₹7.80): ${remaining} units = ₹${(remaining * 7.80).toFixed(2)}</div>`;
+      }
+
+      breakdown += `<div class="total">Total Bill: ₹${total.toFixed(2)}</div>`;
+      billDetails.innerHTML = breakdown;
+    }
+  </script>
+</body>
+</html>
